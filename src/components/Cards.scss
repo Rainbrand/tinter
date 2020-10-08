@@ -9,6 +9,9 @@
     align-items: center;
 
     &__tinder-card{
+      position: relative;
+      display: flex;
+      justify-content: center;
       margin-top: 0.5rem;
       width: 95%;
 
@@ -17,19 +20,59 @@
         border-radius: 20px;
       }
     }
+
+    &__info{
+      position: absolute;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      align-self: end;
+      word-wrap: anywhere;
+      width: 95%;
+    }
+
     &__headline {
       display: flex;
-      align-items: baseline;
+      align-items: center;
       position: relative;
-      margin-top: -13rem;
-      margin-left: 1rem;
+      width: 100%;
       color: white;
       font-size: xx-large;
+      text-shadow: 1px 0 1px #000,
+      0 1px 1px #000,
+      -1px 0 1px #000,
+      0 -1px 1px #000;
+    }
+
+    &__name{
+      max-width: 80%;
     }
 
     &__age{
-      padding-left: 10px;
+      margin-left: 10px;
       font-weight: lighter;
+    }
+
+    &__info-icon{
+      display: flex;
+      justify-content: center;
+      margin-left: 10px;
+      font-size: 0.5em;
+      background-color: white;
+      width: 1.3rem;
+      border-radius: 45%;
+      color: black;
+      text-shadow: none;
+    }
+
+    &__description{
+      width: 100%;
+      color: white;
+      font-size: larger;
+      text-shadow: 1px 0 1px #000,
+      0 1px 1px #000,
+      -1px 0 1px #000,
+      0 -1px 1px #000;
     }
   }
 }

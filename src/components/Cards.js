@@ -7,12 +7,14 @@ function Cards(){
             id: 1,
             name: "Name#1",
             age: 18,
+            description: "Lorem Ipsum",
             img: "https://picsum.photos/1000/1500"
         },
         {
             id: 2,
             name: "Name#2",
             age: 18,
+            description: "Lorem Ipsum",
             img: "https://picsum.photos/1000/1500"
         }]);
 
@@ -22,9 +24,13 @@ function Cards(){
                 <div className="card">
                     <TinderCard className="card__tinder-card" key={card.id} preventSwipe={['down']}>
                         <img src={card.img} alt=""/>
-                        <div className="card__headline">
-                            <h3 className="card__name">{card.name}</h3>
-                            <h4 className="card__age">{card.age}</h4>
+                        <div className="card__info">
+                            <div className="card__headline">
+                                <h3 className="card__name">{card.name}</h3>
+                                <h4 className="card__age">{card.age}</h4>
+                                <div className="card__info-icon">i</div>
+                            </div>
+                            <p className="card__description">{card.description}</p>
                         </div>
                     </TinderCard>
                 </div>
