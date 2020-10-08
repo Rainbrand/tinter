@@ -1,0 +1,30 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 2px -2px gray;
+
+  &__logo{
+    padding: 5px 0 5px 0;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  .MuiSvgIcon-root{
+    padding: 5px 0 5px 0;
+    color: grey;
+    cursor: pointer;
+
+    &:hover{
+      color: black;
+    }
+  }
+  .fa-tint{
+    color: grey;
+    cursor: pointer;
+
+    &:hover{
+      color: black;
+    }
+  }
+}

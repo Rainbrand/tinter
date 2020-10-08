@@ -1,0 +1,35 @@
+.card-container{
+  position: relative;
+  display: flex;
+
+  .card{
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    &__tinder-card{
+      margin-top: 0.5rem;
+      width: 95%;
+
+      img{
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+    &__headline {
+      display: flex;
+      align-items: baseline;
+      position: relative;
+      margin-top: -13rem;
+      margin-left: 1rem;
+      color: white;
+      font-size: xx-large;
+    }
+
+    &__age{
+      padding-left: 10px;
+      font-weight: lighter;
+    }
+  }
+}
