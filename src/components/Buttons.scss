@@ -1,0 +1,39 @@
+.MuiSvgIcon-root{
+  color: white;
+}
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__container {
+    position: relative;
+    width: inherit;
+    margin-top: 750px;
+  }
+
+  &__return-button{
+    color: yellow;
+  }
+
+  &__nope-button{
+    color: red;
+  }
+
+  &__star-button{
+    color: blue;
+  }
+
+  &__like-button{
+    color: lightgreen;
+  }
+
+  &__flash-button{
+    color: mediumblue;
+  }
+}
+
+.MuiButtonBase-root{
+
+  box-shadow: 0px 0px 15px 0.2px #B2B2B2;
+}

@@ -9,9 +9,9 @@ function Header(){
     return(
         <div className="header">
             <i className="fas fa-tint fa-2x"/>
-            <FavoriteIcon fontSize={"large"}/>
-            <QuestionAnswerIcon fontSize={"large"}/>
-            <PersonIcon fontSize={"large"}/>
+            <FavoriteIcon fontSize="large"/>
+            <QuestionAnswerIcon fontSize="large"/>
+            <PersonIcon fontSize="large"/>
         </div>
     )
 }
