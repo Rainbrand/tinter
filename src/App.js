@@ -8,29 +8,37 @@ import Chats from "./components/Chats";
 import ChatHeader from "./components/ChatHeader";
 import ChatScreen from "./components/ChatScreen";
 import Chat from "./components/Chat";
+import {useSelector} from "react-redux";
+
 
 function App() {
-  return (
-    <div className="App">
-        <BrowserRouter>
-            <Switch>
-                <Route path="/chats" exact>
-                    <Header/>
-                    <Chats/>
-                </Route>
-                <Route path="/" exact>
-                    <Header/>
-                    <Cards/>
-                    <Buttons/>
-                </Route>
-                <Route path="/chats/:name" exact>
-                    <ChatScreen/>
-                    <Chat/>
-                </Route>
-            </Switch>
-        </BrowserRouter>
-    </div>
-  );
+    const user = useSelector(state => state.user)
+
+    return (
+        <div className="App">
+            <BrowserRouter>
+                {user ?
+                    <Switch>
+                        <Route path="/chats" exact>
+                            <Header/>
+                            <Chats/>
+                        </Route>
+                        <Route path="/" exact>
+                            <Header/>
+                            <Cards/>
+                            <Buttons/>
+                        </Route>
+                        <Route path="/chats/:name" exact>
+                            <ChatScreen/>
+                            <Chat/>
+                        </Route>
+                    </Switch>
+                    :
+                    <h1>Not logged in</h1>
+                }
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;

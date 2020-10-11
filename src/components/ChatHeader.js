@@ -3,6 +3,7 @@ import "./ChatHeader.scss"
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import {IconButton} from "@material-ui/core";
 import {Link} from "react-router-dom";
+import store from "../store/store";
 
 function ChatHeader(){
     return(
