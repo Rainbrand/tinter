@@ -1,0 +1,19 @@
+.chat-preview{
+  display: flex;
+  align-items: center;
+
+  &__avatar{
+    margin: 0.5em;
+    height: 4rem !important;
+    width: auto !important;
+  }
+
+  &__name{
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  &:hover{
+    background-color: #ececec;
+  }
+}

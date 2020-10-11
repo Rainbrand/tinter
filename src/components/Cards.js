@@ -21,8 +21,8 @@ function Cards(){
     return(
         <div className="card-container">
             {cards.map(card => (
-                <div className="card">
-                    <TinderCard className="card__tinder-card" key={card.id} preventSwipe={['down']}>
+                <div className="card" key={card.id}>
+                    <TinderCard className="card__tinder-card" preventSwipe={['down']}>
                         <img src={card.img} alt=""/>
                         <div className="card__info">
                             <div className="card__headline">
