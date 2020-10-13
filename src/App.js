@@ -5,10 +5,8 @@ import Cards from "./components/Cards";
 import Buttons from "./components/Buttons";
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Chats from "./components/Chats";
-import ChatHeader from "./components/ChatHeader";
-import ChatScreen from "./components/ChatScreen";
-import Chat from "./components/Chat";
 import {useSelector} from "react-redux";
+import ChatScreen from "./components/ChatScreen";
 
 
 function App() {
@@ -17,7 +15,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-                {user ?
+                {user?
                     <Switch>
                         <Route path="/chats" exact>
                             <Header/>
@@ -30,7 +28,6 @@ function App() {
                         </Route>
                         <Route path="/chats/:name" exact>
                             <ChatScreen/>
-                            <Chat/>
                         </Route>
                     </Switch>
                     :

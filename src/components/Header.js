@@ -3,7 +3,7 @@ import "./Header.scss"
 import PersonIcon from '@material-ui/icons/Person';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import {Link, useHistory} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 function Header(){

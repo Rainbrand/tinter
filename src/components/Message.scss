@@ -1,0 +1,30 @@
+.message{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: max-content;
+  max-width: 80%;
+
+  &__text{
+    margin-left: 0.5em;
+    padding: 0.4em;
+    background-color: #d0d0d0;
+    border-radius: 10px;
+    word-wrap: break-word;
+    width: 65%;
+  }
+
+  &__timestamp{
+    margin-left: 0.5em;
+    font-weight: lighter;
+    font-size: 0.8em;
+  }
+
+  &--self{
+    align-self: flex-end;
+    .message__text{
+        background-color: #7ddaf5;
+        width: 78%;
+    }
+  }
+}

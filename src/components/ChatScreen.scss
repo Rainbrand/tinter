@@ -1,0 +1,41 @@
+.chatScreen{
+  display: flex;
+  flex-flow: column;
+  height: inherit;
+
+
+  &__messages{
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    padding: 0 1em;
+    overflow-y: scroll;
+    height: inherit;
+  }
+
+  &__input{
+    display: flex;
+    align-items: center;
+    padding: 1em 1em;
+    background-color: #d7d7d7;
+  }
+
+  &__form{
+    display: flex;
+    flex: 1;
+
+    input{
+      flex: 1;
+      border-radius: 10px;
+      border: 0.5px solid black;
+
+      &:focus{
+        outline: none;
+      }
+    }
+
+    > button{
+      display: none;
+    }
+  }
+}
