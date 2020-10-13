@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import "./ChatScreen.scss"
 import ChatHeader from "./ChatHeader";
 import Message from "./Message";
@@ -8,6 +8,11 @@ function ChatScreen(){
     const [messages, setMessages] = useState([{id:1, sender: 12, text: "Texsssssssssssssssssssssssssssssssssssssssssssssssssssssssst"}]) //sender is a placeholder for logged user
     const user = useSelector(state => state.user)
     const [input, setInput] = useState("");
+    const messagesEnd = useRef(null)
+
+    useEffect(() =>{
+        messagesEnd.current.scrollIntoView({ behavior: "smooth" })
+    }, [messages])
 
     return(
         <div className="chatScreen">
@@ -16,8 +21,9 @@ function ChatScreen(){
                 {messages.map(msg => (
                     <Message msg={msg.text} sender={msg.sender} key={msg.id}/>
                 ))}
-
+                <div ref={messagesEnd}/>
             </div>
+
             <div className="chatScreen__input">
                 <form className="chatScreen__form">
                     <input onChange={event => setInput(event.target.value) } value={input} placeholder="Text message"/>
