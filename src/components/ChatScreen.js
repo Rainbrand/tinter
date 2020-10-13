@@ -5,7 +5,7 @@ import Message from "./Message";
 import {useSelector} from "react-redux";
 
 function ChatScreen(){
-    const [messages, setMessages] = useState([{id:1, sender: 12, text: "Texsssssssssssssssssssssssssssssssssssssssssssssssssssssssst"}]) //sender is a placeholder for logged user
+    const [messages, setMessages] = useState([{id:1, sender: 12, text: "Text"}]) //sender is a placeholder for logged user
     const user = useSelector(state => state.user)
     const [input, setInput] = useState("");
     const messagesEnd = useRef(null)
@@ -19,7 +19,7 @@ function ChatScreen(){
             <ChatHeader/>
             <div className="chatScreen__messages">
                 {messages.map(msg => (
-                    <Message msg={msg.text} sender={msg.sender} key={msg.id}/>
+                    <Message key={msg.id} msg={msg.text} sender={msg.sender} timestamp={msg.timestamp}/>
                 ))}
                 <div ref={messagesEnd}/>
             </div>
@@ -30,8 +30,9 @@ function ChatScreen(){
                     <button type="submit" onClick={event => {
                         event.preventDefault()
                         if (input) {
+                            const date = new Date().toUTCString()
                             setMessages(prevState => {
-                                const state = [...prevState].concat([{id: Math.random(), sender: user, text: input}])
+                                const state = [...prevState].concat([{id: Math.random(), sender: user, text: input, timestamp: date}])
                                 setInput("")
                                 return state
                             })

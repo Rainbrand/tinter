@@ -16,7 +16,7 @@ function Message(props){
                 <p className="message__text">
                     {props.msg}
                 </p>
-                <small className="message__timestamp">timestamp</small>
+                <small className="message__timestamp">{props.timestamp}</small>
             </div>
         )
     }
@@ -29,7 +29,7 @@ function Message(props){
             <p className="message__text">
                 {props.msg}
             </p>
-            <small className="message__timestamp">timestamp</small>
+            <small className="message__timestamp">{props.timestamp}</small>
         </div>
     )
 }
