@@ -24,15 +24,15 @@ function Cards(){
                 <div className="card" key={card.id}>
                     <TinderCard className="card__tinder-card" preventSwipe={['down']}>
                         <img src={card.img} alt=""/>
-                        <div className="card__info">
-                            <div className="card__headline">
-                                <h3 className="card__name">{card.name}</h3>
-                                <h4 className="card__age">{card.age}</h4>
-                                <div className="card__info-icon">i</div>
-                            </div>
-                            <p className="card__description">{card.description}</p>
-                        </div>
                     </TinderCard>
+                    <div className="card__info">
+                        <div className="card__headline">
+                            <h3 className="card__name">{card.name}</h3>
+                            <h4 className="card__age">{card.age}</h4>
+                            <div className="card__info-icon">i</div>
+                        </div>
+                        <p className="card__description">{card.description}</p>
+                    </div>
                 </div>
             ))}
         </div>

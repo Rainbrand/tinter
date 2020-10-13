@@ -7,11 +7,11 @@
     display: flex;
     flex-flow: column;
     align-items: center;
+    justify-content: flex-end;
 
     &__tinder-card{
-      position: relative;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       margin-top: 0.5rem;
       width: 95%;
 
@@ -29,9 +29,9 @@
       display: flex;
       flex-flow: column;
       align-items: center;
-      align-self: end;
       word-wrap: anywhere;
-      width: 95%;
+      width: 90%;
+      cursor: pointer;
     }
 
     &__headline {
